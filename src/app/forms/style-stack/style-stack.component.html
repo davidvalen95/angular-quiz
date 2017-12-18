@@ -9,7 +9,8 @@
          [minlength]="this.baseForm.rules['minlength']"
          [maxlength]="this.baseForm.rules['maxlength']"
          [pattern]="this.baseForm.rules['pattern']"
-         type="{{this.baseForm.type}}"
+         [placeholder]="this.baseForm.placeholder"
+         [type]="this.baseForm.type"
          class="form-control"
          id="{{this.baseForm.name}}Id"/>
   <app-show-error-second [baseForm]="this.baseForm" [model]="input"></app-show-error-second>

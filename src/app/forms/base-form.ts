@@ -1,6 +1,5 @@
 
 import {Injectable} from "@angular/core";
-import {DomSanitizer} from "@angular/platform-browser";
 
 @Injectable()
 export class BaseForm {
@@ -9,10 +8,10 @@ export class BaseForm {
   public value;
 
   constructor(
-    public labelValue,
-    public placeholder,
-    public name,
-    public type,
+    public labelValue:string,
+    public placeholder:string,
+    public name:string,
+    public type:string,
     ){
 
   }

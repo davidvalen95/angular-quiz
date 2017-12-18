@@ -20,13 +20,14 @@ import {BaseForm} from "../base-form";
 })
 export class ShowErrorSecondComponent implements OnInit {
 
+
   @Input() public model: NgModel = null;
   @Input() public baseForm:BaseForm ;
 
   public errorMessage:{} = {
     'required' : (params) => `${this.baseForm.labelValue || this.baseForm.name} is required!`,
     'minlength': (params) => `${this.baseForm.labelValue || this.baseForm.name} needs ${params.actualLength}/${params.requiredLength}, `,
-    'maxlength': (params) => 'exceed limited',
+    'maxlength': (params) => 'exceed maximum length',
     'email': (params) => `${this.baseForm.labelValue || this.baseForm.name} must have valid email`,
     'pattern':(params) => `${this.baseForm.labelValue || this.baseForm.name} ${this.baseForm.rules['patternInfo'] || 'does not satisfy input requirement'}`
   }

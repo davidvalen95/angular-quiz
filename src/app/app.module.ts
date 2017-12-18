@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './pages/header/header.component';
+import { FooterComponent } from './pages/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
 import {RouterModule, Routes} from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -22,6 +22,7 @@ import {AuthenticatedGuard} from "./guards/authenticated.guard";
 import {FlashService} from "./services/flash.service";
 import { ShowErrorSecondComponent } from './forms/show-error-second/show-error-second.component';
 import { StyleStackComponent } from './forms/style-stack/style-stack.component';
+import {WebsocketIoService} from "./services/websocket-io.service";
 
 
 const appRoutes:Routes = [
@@ -76,7 +77,7 @@ const appRoutes:Routes = [
     HttpClientModule,
 
   ],
-  providers: [JokeService, ApiService, FlashService, AuthenticatedGuard],
+  providers: [JokeService, ApiService, FlashService, AuthenticatedGuard, WebsocketIoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

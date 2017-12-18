@@ -10,7 +10,6 @@ import {BaseForm} from "../../forms/base-form";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   public baseForms: BaseForm[] = [];
   constructor(private title:Title, public flashService:FlashService, public jokeService:JokeService, public domSanitizer:DomSanitizer) {
     title.setTitle("Login");
